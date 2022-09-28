@@ -1,0 +1,15 @@
+<% if @tweet.errors.present? %>
+<h3>エラーがあります。</h3>
+<ul>
+    <% @tweet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_for @tweet , url: {action: :create} do |f| %>
+    <%= f.label :message, 'メッセージ' %>
+    <%= f.text_field :message %>
+    <%= f.submit '投稿' %>
+<% end %>
+
