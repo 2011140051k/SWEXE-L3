@@ -13,3 +13,105 @@
  *= require_tree .
  *= require_self
  */
+#sidebar {
+    font-size: 20px;
+    width:400px;
+    padding-left:100px;
+    float:left;
+}
+
+#header,#footer,#content {
+    width:600px;
+    float:right;
+}
+
+#header {
+    padding-top:20px;
+    padding-bottom:50px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.button1 {
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 30px ;
+}
+
+.button2 {
+    font-weight:500;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 30px ;
+    text-decoration: none;
+    background-color: #00acee;
+}
+
+.noline {
+    color: black;
+    text-decoration: none;
+}
+
+.noline2 {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.p1 {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.p2 {
+    color: gray;
+    font-size: 20px;
+}
+
+.p3 {
+    width: 10px;
+    height: 10px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.wrap {
+    text-align:right;
+}
+
+.wrap input[type="checkbox"] {
+  display: none;
+}
+
+.wrap .content {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 10px;
+  
+}
+
+.wrap label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.switch:checked + .content {
+  height: auto;
+  padding: 8px;
+}
+
+.foot {
+    padding-right: 10px;
+}

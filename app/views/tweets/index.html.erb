@@ -3,14 +3,26 @@
 <% end %>
 
 <% @tweets.each do |book| %>
-    <p>
+        <span class='p3'><%= image_tag 'i.png' %></span>
+        <span class='p1'><%= book.name %></span> 
+        <span class='p2'><%= ((Time.current - book.tdate)/60).to_i %>分 </span>
+        <div class="wrap">
+            <label for="label1">・・・</label>
+            <input type="checkbox" id="label1" class="switch" />
+        <div class="content">
+          <p>
+            <%= link_to 'ツイートする', "/tweets/#{book.id}", method: :create %>
+            <%= link_to '削除', "/tweets/#{book.id}", method: :delete %>
+            <%= link_to '表示', "/tweets/#{book.id}" %>
+            <%= link_to '編集', "/tweets/#{book.id}/edit" %>
+          </p>
+        </div>
+        </div>
+        <p>
         <%= book.message %>
-        <%= book.tdate %>
-        <%= link_to '削除', "/tweets/#{book.id}", method: :delete %>
-        <%= link_to '表示', "/tweets/#{book.id}" %>
-        <%= link_to '編集', "/tweets/#{book.id}/edit" %>
-    </p>
-    
+        
+        
+        </p>
+        
 <% end %>
 
-<p><%= link_to '新規投稿', '/tweets/new' %></p>

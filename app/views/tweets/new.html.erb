@@ -8,8 +8,12 @@
 <% end %>
 
 <%= form_for @tweet , url: {action: :create} do |f| %>
+    <present><%= f.label :file, 'ファイル' %>
+    <%= f.file_field :file %>
+    <%= f.label :name, 'ユーザー名' %>
+    <%= f.text_field :name %>
     <%= f.label :message, 'メッセージ' %>
     <%= f.text_field :message %>
-    <%= f.submit '投稿' %>
+    <%= f.submit '投稿' %></p>
 <% end %>
 
